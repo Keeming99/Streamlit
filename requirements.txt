@@ -1,3 +1,10 @@
 matplotlib
 streamlit
 pandas
+
+streamlit
+pandas
+lxml
+requests
+json5
+Pillow
