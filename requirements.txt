@@ -13,3 +13,4 @@ torch
 bitsandbytes
 transformers
 streamlit
+peft
