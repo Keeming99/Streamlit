@@ -4,13 +4,14 @@ from transformers import LlamaTokenizer, LlamaForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
 import difflib
 
-import os
-from transformers import LlamaTokenizer
+from transformers import LlamaForCausalLM, LlamaTokenizer
+import streamlit as st
 
-# Retrieve the Hugging Face token from Streamlit secrets
+# Retrieve the Hugging Face token from secrets
 hf_token = st.secrets["huggingface"]["token"]
 
-# Use the token for loading the tokenizer
+# Use the token to authenticate and load the model
+model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_auth_token=hf_token)
 tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_auth_token=hf_token)
 
 # Class for IntentResponseInference (from the original code)
