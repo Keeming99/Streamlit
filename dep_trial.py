@@ -4,15 +4,6 @@ from transformers import LlamaTokenizer, LlamaForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
 import difflib
 
-import os
-
-huggingface_token = os.getenv("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")
-
-# If needed, login with Hugging Face using the token
-from huggingface_hub import login
-
-login(token=huggingface_token)
-
 
 # Class for IntentResponseInference (from the original code)
 class IntentResponseInference:
