@@ -1,4 +1,3 @@
-pip install torch
 import torch
 import streamlit as st
 from transformers import LlamaTokenizer, LlamaForCausalLM, BitsAndBytesConfig
