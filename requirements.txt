@@ -8,3 +8,8 @@ lxml
 requests
 json5
 Pillow
+
+torch
+bitsandbytes
+transformers
+streamlit
